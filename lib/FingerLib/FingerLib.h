@@ -42,7 +42,7 @@
 #define MIN_FINGER_POS		50			// minimum motor position
 // #define MAX_FINGER_POS		923			// maximum motor position
 // #define MIN_FINGER_POS		100			// minimum motor position
-#define POS_REACHED_TOLERANCE	50		// tolerance for posReached()
+#define POS_REACHED_TOLERANCE	70		// tolerance for posReached()
 
 typedef struct  {
 	uint8_t dir[2];
