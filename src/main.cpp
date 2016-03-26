@@ -19,7 +19,6 @@ enum
 
 void OnSetFingers()
 {
-  MYSERIAL.println("OnSetFingers");
   int i;
   for(i = 0; i < NUM_FINGERS; ++i)
   {
@@ -28,12 +27,6 @@ void OnSetFingers()
     double speed = cmdMessenger.readDoubleArg();
     speed = min(1, max(0, speed)) * (MAX_SPEED-MIN_SPEED) + MIN_SPEED;
 
-    MYSERIAL.print("finger: ");
-    MYSERIAL.println(i);
-    MYSERIAL.print("pos: ");
-    MYSERIAL.println(pos);
-    MYSERIAL.print("speed: ");
-    MYSERIAL.println(speed);
     finger[i].writeSpeed(speed);
     finger[i].writePos(pos);
   }
